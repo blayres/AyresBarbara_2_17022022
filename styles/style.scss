@@ -10,6 +10,7 @@ $color__secondaire: #FF79DA;
 $color__tertiaire: #99E2D0;
 $color__gradient: linear-gradient(180deg, #FF79DA, #9356DC);
 
+
 @mixin button-style {
     opacity: 1;
     background: $color__gradient;
