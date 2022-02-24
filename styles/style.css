@@ -11,25 +11,26 @@ body {
   margin-bottom: 17px;
 }
 
-main .location {
+.location {
   display: flex;
   justify-content: center;
   background-color: #eaeaea;
   box-shadow: 0px 16px 20px 5px black;
 }
-main .location__icon {
+.location__icon {
   padding: 15px 15px 0px 0px;
   font-size: 15px;
 }
-main .hero {
+
+.hero {
   padding: 0px 31px;
   background-color: #f6f6f6;
 }
-main .hero__container {
+.hero__container {
   text-align: center;
   padding: 20px;
 }
-main .hero__button {
+.hero__button {
   opacity: 1;
   background: linear-gradient(180deg, #FF79DA, #9356DC);
   color: white;
@@ -38,16 +39,17 @@ main .hero__button {
   border-radius: 200px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
 }
-main .hero__text {
+.hero__text {
   color: gray;
   font-weight: 300;
 }
-main .process__contain {
+
+.process__contain {
   margin-top: 15px;
   padding: 20px;
   background: white;
 }
-main .process__contain .process__step {
+.process__contain .process__step {
   display: flex;
   align-items: center;
   position: relative;
@@ -58,10 +60,10 @@ main .process__contain .process__step {
   border-radius: 17px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 }
-main .process__contain .process__step__violet {
+.process__contain .process__step__violet {
   background-color: rgba(147, 86, 220, 0.13);
 }
-main .process__contain .process__number {
+.process__contain .process__number {
   background-color: #9356dc;
   color: #fff;
   font-size: 13px;
@@ -70,16 +72,106 @@ main .process__contain .process__number {
   position: absolute;
   transform: translateX(-50%);
 }
-main .process__contain .process__icon {
+.process__contain .process__icon {
   color: gray;
   font-size: 20px;
   margin-left: 35px;
 }
-main .process__contain .process__icon__store {
+.process__contain .process__icon__store {
   color: #9356dc;
 }
-main .process__contain .process__text {
+.process__contain .process__text {
   margin-left: 30px;
+}
+
+.restaurants {
+  margin-top: 35px;
+  padding: 20px;
+  background: #f6f6f6;
+}
+
+.restaurant__card {
+  width: calc(100% - 0px);
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 0px 6px 0px #0000002e;
+  margin-bottom: 20px;
+  position: relative;
+}
+.restaurant__card-image {
+  width: 100%;
+  max-height: 180px;
+  height: 180px;
+  max-width: 100%;
+}
+.restaurant__card-image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.restaurant__card-new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background: #99e2d0;
+  top: 15px;
+  right: 15px;
+}
+.restaurant__card-new p {
+  color: #1b6150;
+  padding: 10px 20px;
+  margin: 0;
+}
+.restaurant__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 75px;
+}
+.restaurant__block-info {
+  line-height: 25px;
+  margin-left: 15px;
+}
+.restaurant__block-name {
+  font-weight: 800;
+}
+
+.footer {
+  padding: 20px;
+  background: #353535;
+  color: #fff;
+}
+.footer__bloc {
+  margin-bottom: 20px;
+}
+.footer__bloc .logo svg {
+  width: 30%;
+}
+.footer__bloc .logo svg path {
+  fill: white;
+}
+.footer__bloc-link {
+  display: flex;
+  align-items: center;
+  margin-bottom: -20px;
+  font-size: small;
+}
+.footer__bloc-link .fa-utensils {
+  width: 17px;
+}
+.footer__bloc-link__title {
+  margin-left: 8px;
+}
+.footer__bloc-link__title-margin0 {
+  margin-left: 0;
+}
+.footer__bloc-link__title-margin0 a {
+  text-decoration: none;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
