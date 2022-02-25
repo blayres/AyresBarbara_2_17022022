@@ -7,15 +7,15 @@ body {
 .header__logo {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
-  margin-bottom: 17px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .location {
   display: flex;
   justify-content: center;
   background-color: #eaeaea;
-  box-shadow: 0px 16px 20px 5px black;
+  box-shadow: 0px 0px 7px grey;
 }
 .location__icon {
   padding: 15px 15px 0px 0px;
@@ -37,7 +37,13 @@ body {
   padding: 1px 20px;
   margin: 35px;
   border-radius: 200px;
+  border: none;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  margin-top: 13px;
+}
+.hero__button:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
 .hero__text {
   color: gray;
@@ -48,6 +54,13 @@ body {
   margin-top: 15px;
   padding: 20px;
   background: white;
+}
+.process__contain .process__steps {
+  display: flex;
+  justify-content: space-evenly;
+}
+.process__contain .process__title {
+  margin-left: 122px;
 }
 .process__contain .process__step {
   display: flex;
@@ -60,8 +73,12 @@ body {
   border-radius: 17px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 }
-.process__contain .process__step__violet {
+.process__contain .process__step:hover {
   background-color: rgba(147, 86, 220, 0.13);
+  cursor: pointer;
+}
+.process__contain .process__step:hover i {
+  color: #9356dc;
 }
 .process__contain .process__number {
   background-color: #9356dc;
@@ -77,9 +94,6 @@ body {
   font-size: 20px;
   margin-left: 35px;
 }
-.process__contain .process__icon__store {
-  color: #9356dc;
-}
 .process__contain .process__text {
   margin-left: 30px;
 }
@@ -89,9 +103,21 @@ body {
   padding: 20px;
   background: #f6f6f6;
 }
+.restaurants__title {
+  margin-left: 122px;
+  margin-bottom: 50px;
+}
 
+.restaurant__cards {
+  flex-wrap: wrap;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .restaurant__card {
-  width: calc(100% - 0px);
+  width: calc(41% - 20px);
+  margin-right: 18px;
+  margin-left: 18px;
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0px 0px 6px 0px #0000002e;
@@ -139,6 +165,20 @@ body {
 .restaurant__block-name {
   font-weight: 800;
 }
+.restaurant__block-hearth {
+  position: relative;
+  font-size: 22px;
+  margin-right: 20px;
+}
+.restaurant__block-hearth .fas {
+  position: absolute;
+  opacity: 0;
+  color: #9356dc;
+}
+.restaurant__block-hearth .fas:hover {
+  opacity: 1;
+  cursor: pointer;
+}
 
 .footer {
   padding: 20px;
@@ -147,31 +187,84 @@ body {
 }
 .footer__bloc {
   margin-bottom: 20px;
+  margin-top: 20px;
+}
+.footer__bloc .logo {
+  margin-bottom: 15px;
 }
 .footer__bloc .logo svg {
-  width: 30%;
+  width: 32%;
 }
 .footer__bloc .logo svg path {
   fill: white;
 }
+.footer__bloc-links {
+  margin-left: 126px;
+}
 .footer__bloc-link {
   display: flex;
   align-items: center;
-  margin-bottom: -20px;
-  font-size: small;
+  font-size: large;
+  margin-bottom: 9px;
 }
 .footer__bloc-link .fa-utensils {
-  width: 17px;
+  width: 22px;
 }
 .footer__bloc-link__title {
   margin-left: 8px;
+  text-decoration: none;
+  color: white;
 }
 .footer__bloc-link__title-margin0 {
   margin-left: 0;
-}
-.footer__bloc-link__title-margin0 a {
   text-decoration: none;
   color: white;
+}
+.footer__bloc-link__title-margin0-contact {
+  text-decoration: none;
+  color: white;
+}
+.footer__bloc-link__title-margin0-contact:hover {
+  text-decoration: underline;
+}
+.footer__bloc-link__title-margin0:hover {
+  text-decoration: underline;
+}
+.footer__bloc-link__title:hover {
+  text-decoration: underline;
+}
+
+/* MOBILE */
+@media screen and (max-width: 768px) {
+  .process__contain .process__title {
+    margin-left: auto;
+  }
+  .process__contain .process__steps {
+    display: block;
+  }
+
+  .restaurants__title {
+    margin-left: auto;
+    margin-bottom: 30px;
+  }
+
+  .restaurant__cards {
+    display: flex;
+    width: 100%;
+    display: block;
+  }
+  .restaurant__card {
+    margin-right: 0px;
+    margin-left: 0;
+    width: calc(100% - 0px);
+  }
+
+  .footer__bloc {
+    margin-top: 0;
+  }
+  .footer__bloc-links {
+    margin-left: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

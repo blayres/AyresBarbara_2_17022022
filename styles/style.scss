@@ -18,6 +18,7 @@ $color__gradient: linear-gradient(180deg, #FF79DA, #9356DC);
     padding: 1px 20px;
     margin: 35px;
     border-radius: 200px;
+    border: none;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
 }
 
@@ -42,8 +43,8 @@ body {
     &__logo {
         display: flex;
         justify-content: center;
-        margin-top: 30px;
-        margin-bottom: 17px;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 }
 
@@ -53,7 +54,7 @@ body {
     display: flex;
     justify-content: center;
     background-color: $color__gris;
-    box-shadow: 0px 16px 20px 5px black;
+    box-shadow: 0px 0px 7px grey;
 
     &__icon {
         padding: 15px 15px 0px 0px;
@@ -72,6 +73,12 @@ body {
 
     &__button {
         @include button-style;
+        margin-top: 13px;
+    }
+
+    &__button:hover {
+        opacity: 0.8;
+        cursor: pointer;
     }
 
     &__text {
@@ -86,6 +93,15 @@ body {
     background: white;
 
     .process {
+        &__steps {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        &__title {
+            margin-left: 122px;
+        }
+
         &__step {
             display: flex;
             align-items: center;
@@ -93,8 +109,13 @@ body {
             @include button-style-gris
         }
 
-        &__step__violet {
+        &__step:hover {
             background-color: rgb(147, 86, 220, 0.13);
+            cursor: pointer;
+        }
+
+        &__step:hover i {
+            color: $color__primaire;
         }
 
         &__number {
@@ -113,9 +134,7 @@ body {
             margin-left: 35px;
         }
 
-        &__icon__store {
-            color: $color__primaire;
-        }
+
 
         &__text {
             margin-left: 30px;
@@ -129,11 +148,25 @@ body {
     margin-top: 35px;
     padding: 20px;
     background: $color__gris__light;
+
+    &__title {
+        margin-left: 122px;
+        margin-bottom: 50px;
+    }
 }
 
 .restaurant {
+    &__cards {
+        flex-wrap: wrap;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
     &__card {
-        width: calc(100% - 0px);
+        width: calc(41% - 20px);
+        margin-right: 18px;
+        margin-left: 18px;
         background-color: #fff;
         border-radius: 20px;
         box-shadow: 0px 0px 6px 0px #0000002e;
@@ -187,6 +220,23 @@ body {
         &-name {
             font-weight: 800;
         }
+
+        &-hearth {
+            position: relative;
+            font-size: 22px;
+            margin-right: 20px;
+
+            .fas {
+                position: absolute;
+                opacity: 0;
+                color: $color__primaire;
+            }
+
+            .fas:hover {
+                opacity: 1;
+                cursor: pointer;
+            }
+        }
     }
 }
 
@@ -199,9 +249,13 @@ body {
 
     &__bloc {
         margin-bottom: 20px;
+        margin-top: 20px;
+
         .logo {
+            margin-bottom: 15px;
+
             svg {
-                width: 30%;
+                width: 32%;
 
                 path {
                     fill: white;
@@ -209,28 +263,104 @@ body {
             }
         }
 
+        &-links{
+            margin-left: 126px;
+        }
+
         &-link {
             display: flex;
             align-items: center;
-            margin-bottom: -20px;
-            font-size: small;
+            font-size: large;
+            margin-bottom: 9px;
 
             .fa-utensils {
-                width: 17px;
+                width: 22px;
             }
 
             &__title {
                 margin-left: 8px;
+                text-decoration: none;
+                color: white;
 
                 &-margin0 {
                     margin-left: 0;
+                    text-decoration: none;
+                    color: white;
 
-                    a {
+                    &-contact {
                         text-decoration: none;
                         color: white;
                     }
+
+                    &-contact:hover {
+                        text-decoration: underline;
+                    }
                 }
+
+                &-margin0:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            &__title:hover {
+                text-decoration: underline;
             }
         }
     }
+}
+
+
+
+
+/* MOBILE */
+
+@media screen and (max-width: 768px) {
+
+    .process__contain {
+        .process {
+            &__title {
+                margin-left: auto;
+            }
+
+            &__steps {
+                display: block;
+
+            }
+        }
+    }
+
+
+
+    .restaurants {
+        &__title {
+            margin-left: auto;
+            margin-bottom: 30px;
+        }
+    }
+
+    .restaurant {
+        &__cards {
+            display: flex;
+            width: 100%;
+            display: block;
+        }
+
+        &__card {
+            margin-right: 0px;
+            margin-left: 0;
+            width: calc(100% - 0px);
+        }
+    }
+
+
+    .footer {
+        &__bloc {
+            margin-top: 0;
+
+            &-links{
+                margin-left: 0;
+            }
+        }
+    }
+
 }
