@@ -39,6 +39,8 @@ header {
   background-color: #f6f6f6;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
+  position: relative;
+  margin-top: -60px;
 }
 .menu__header {
   display: flex;
@@ -125,6 +127,16 @@ header {
 
 .validation__box {
   visibility: hidden;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+.validation__box i {
+  background-color: #99E2D0;
+  color: white;
+  padding: 27px;
+  border-top-right-radius: 17px;
+  border-bottom-right-radius: 17px;
 }
 
 .footer {

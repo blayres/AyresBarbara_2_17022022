@@ -38,7 +38,7 @@ body {
 
 
 // HEADER
-header{
+header {
     display: flex;
     align-items: center;
 }
@@ -79,6 +79,8 @@ header{
     background-color: $color__gris__light;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
+    position: relative;
+    margin-top: -60px;
 
     &__header {
         display: flex;
@@ -116,7 +118,7 @@ header{
                 top: 30px;
                 height: 3px;
                 width: 14%;
-                background-color: #99E2D0;
+                background-color: $color__tertiaire;
             }
 
             h3.active::before {
@@ -134,7 +136,7 @@ header{
             margin-bottom: 20px;
         }
 
-        &__case:hover{
+        &__case:hover {
             cursor: pointer;
         }
     }
@@ -145,6 +147,7 @@ header{
         align-items: baseline;
         line-height: 0px;
     }
+
 
     &__case__dish {
 
@@ -182,6 +185,17 @@ header{
 
 .validation__box {
     visibility: hidden;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+
+    i {
+        background-color: $color__tertiaire;
+        color: white;
+        padding: 27px;
+        border-top-right-radius: 17px;
+        border-bottom-right-radius: 17px;
+    }
 }
 
 
@@ -275,7 +289,7 @@ header{
             margin-right: 0;
         }
 
-        &__grid{
+        &__grid {
             display: block;
         }
     }
