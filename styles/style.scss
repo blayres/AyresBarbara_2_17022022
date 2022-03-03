@@ -46,6 +46,40 @@ body {
     left: 0;
     z-index: 1;
     width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: closedSpinner 1.5s linear forwards;
+    @keyframes closedSpinner {
+        0% { 
+            visibility: visible;
+        }
+
+        100% {
+            visibility: hidden;
+        }
+        
+    }
+
+      span{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 5px solid $color__primaire;
+        border-bottom-color: transparent;
+        animation: spinner 1s linear infinite;
+      }
+      
+      @keyframes spinner {
+        to {
+          transform: rotate(1turn);
+          -webkit-transform: rotate(1turn);
+          -moz-transform: rotate(1turn);
+          -ms-transform: rotate(1turn);
+          -o-transform: rotate(1turn);
+        }
+      }
+      
 }
 
 
@@ -87,6 +121,7 @@ body {
     &__button {
         @include button-style;
         margin-top: 13px;
+        transition: 0.2s all ease-out;
     }
 
     &__button:hover {
@@ -119,7 +154,8 @@ body {
             display: flex;
             align-items: center;
             position: relative;
-            @include button-style-gris
+            @include button-style-gris;
+            transition: 0.2s all ease-in-out;
         }
 
         &__step:hover {
@@ -243,12 +279,18 @@ body {
             .fas {
                 position: absolute;
                 opacity: 0;
-                color: $color__primaire;
+                top: 1px;
+                background: -webkit-linear-gradient(180deg, #FF79DA, #9356DC);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transform: scale(0.1);
+                transition: 0.4s all ease-out;
             }
 
             .fas:hover {
                 opacity: 1;
                 cursor: pointer;
+                transform: scale(1.05);
             }
         }
     }
@@ -295,15 +337,18 @@ body {
                 margin-left: 8px;
                 text-decoration: none;
                 color: white;
+                transition: 0.2s all ease-out;
 
                 &-margin0 {
                     margin-left: 0;
                     text-decoration: none;
                     color: white;
+                    transition: 0.2s all ease-out;
 
                     &-contact {
                         text-decoration: none;
                         color: white;
+                        transition: 0.2s all ease-out;
                     }
 
                     &-contact:hover {

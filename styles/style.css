@@ -4,6 +4,45 @@ body {
   padding: 0%;
 }
 
+.spinner {
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: closedSpinner 1.5s linear forwards;
+}
+@keyframes closedSpinner {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+.spinner span {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid #9356dc;
+  border-bottom-color: transparent;
+  animation: spinner 1s linear infinite;
+}
+@keyframes spinner {
+  to {
+    transform: rotate(1turn);
+    -webkit-transform: rotate(1turn);
+    -moz-transform: rotate(1turn);
+    -ms-transform: rotate(1turn);
+    -o-transform: rotate(1turn);
+  }
+}
+
 .header__logo {
   display: flex;
   justify-content: center;
@@ -40,6 +79,7 @@ body {
   border: none;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
   margin-top: 13px;
+  transition: 0.2s all ease-out;
 }
 .hero__button:hover {
   opacity: 0.8;
@@ -72,6 +112,7 @@ body {
   margin: 30px 0px 0px 12px;
   border-radius: 17px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  transition: 0.2s all ease-in-out;
 }
 .process__contain .process__step:hover {
   background-color: rgba(147, 86, 220, 0.13);
@@ -173,11 +214,17 @@ body {
 .restaurant__block-hearth .fas {
   position: absolute;
   opacity: 0;
-  color: #9356dc;
+  top: 1px;
+  background: -webkit-linear-gradient(180deg, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(0.1);
+  transition: 0.4s all ease-out;
 }
 .restaurant__block-hearth .fas:hover {
   opacity: 1;
   cursor: pointer;
+  transform: scale(1.05);
 }
 
 .footer {
@@ -214,15 +261,18 @@ body {
   margin-left: 8px;
   text-decoration: none;
   color: white;
+  transition: 0.2s all ease-out;
 }
 .footer__bloc-link__title-margin0 {
   margin-left: 0;
   text-decoration: none;
   color: white;
+  transition: 0.2s all ease-out;
 }
 .footer__bloc-link__title-margin0-contact {
   text-decoration: none;
   color: white;
+  transition: 0.2s all ease-out;
 }
 .footer__bloc-link__title-margin0-contact:hover {
   text-decoration: underline;
