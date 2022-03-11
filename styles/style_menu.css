@@ -153,7 +153,6 @@ header {
   justify-content: space-between;
   align-items: baseline;
   line-height: 0px;
-  position: absolute;
 }
 .menu__case__dish-title h4 {
   font-weight: 500;
@@ -165,11 +164,10 @@ header {
 .menu__case__right {
   display: flex;
   justify-content: flex-end;
-  position: relative;
 }
 .menu__case__price {
   display: flex;
-  margin-top: 41px;
+  margin-top: -25px;
   margin-right: 10px;
 }
 .menu__contain-button {
@@ -200,6 +198,7 @@ header {
   background-color: #99E2D0;
   border-top-right-radius: 17px;
   border-bottom-right-radius: 17px;
+  margin-top: -70px;
 }
 .validation__box i {
   color: white;

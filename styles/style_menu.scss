@@ -219,7 +219,6 @@ header {
         justify-content: space-between;
         align-items: baseline;
         line-height: 0px;
-        position: absolute;
     }
 
 
@@ -244,13 +243,12 @@ header {
         &__right {
             display: flex;
             justify-content: flex-end;
-            position: relative;
 
         }
 
         &__price {
             display: flex;
-            margin-top: 41px;
+            margin-top: -25px;
             margin-right: 10px;
         }
     }
@@ -282,6 +280,7 @@ header {
     background-color: $color__tertiaire;
     border-top-right-radius: 17px;
     border-bottom-right-radius: 17px;
+    margin-top: -70px;
 
     i {
         color: white;
