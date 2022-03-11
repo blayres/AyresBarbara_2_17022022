@@ -213,7 +213,7 @@ body {
     }
 
     &__card {
-        width: calc(41% - 20px);
+        width: calc(41% - 14px);
         margin-right: 18px;
         margin-left: 18px;
         background-color: #fff;
@@ -221,6 +221,7 @@ body {
         box-shadow: 0px 0px 6px 0px #0000002e;
         margin-bottom: 20px;
         position: relative;
+        transition: 0.4s all ease-out;
 
         &-image {
             width: 100%;
@@ -253,6 +254,10 @@ body {
                 margin: 0;
             }
         }
+    }
+
+    &__card:hover{
+        transform: scale(1.02);
     }
 
     &__block {

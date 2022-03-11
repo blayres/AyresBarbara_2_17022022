@@ -156,7 +156,7 @@ header {
             box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 20%);
             margin-bottom: 20px;
             animation: effetCascade 1.2s linear forwards;
-            animation-delay: 1.2s;
+            animation-delay: 0.6s;
             overflow: hidden;
 
             &:hover .validation__box {
@@ -186,11 +186,11 @@ header {
         }
 
         &__case:nth-child(2) {
-            animation-delay: 0.4s;
+            animation-delay: 0.1s;
         }
 
         &__case:nth-child(3) {
-            animation-delay: 0.8s;
+            animation-delay: 0.3s;
         }
 
 
