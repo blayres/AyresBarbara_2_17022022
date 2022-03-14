@@ -4,16 +4,17 @@ body {
   padding: 0%;
 }
 
+.container {
+  max-width: 1440px;
+  padding: 0px 20px;
+  margin: 0;
+}
+
 header {
   display: flex;
   align-items: center;
-  margin-left: -30px;
 }
 
-.header {
-  padding: 0px 20px;
-  margin-left: 126px;
-}
 .header__icon {
   font-size: 25px;
   margin-right: 18px;
@@ -48,8 +49,6 @@ header {
   justify-content: space-between;
   align-items: center;
   font-family: "Shrikhand", cursive;
-  margin-left: 97px;
-  margin-right: 126px;
 }
 .menu__header__heart {
   font-size: 22px;
@@ -59,13 +58,14 @@ header {
   position: absolute;
   opacity: 0;
   top: 3px;
+  margin-left: -22px;
   background: -webkit-linear-gradient(180deg, #FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transform: scale(0.1);
   transition: 0.4s all ease-out;
 }
-.menu__header__heart .fas:hover {
+.menu__header__heart .fas:hover, .menu__header__heart .far:hover + .fas {
   opacity: 1;
   cursor: pointer;
   transform: scale(1.05);
@@ -73,7 +73,7 @@ header {
 .menu__grid {
   margin-top: -25px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 .menu__grid__bloc {
   width: calc(25% - 10px);
@@ -223,19 +223,12 @@ header {
 .footer__bloc {
   margin-bottom: 20px;
   margin-top: 20px;
-  margin-left: -30px;
 }
 .footer__bloc .logo {
   margin-bottom: 15px;
 }
-.footer__bloc .logo svg {
-  width: 32%;
-}
 .footer__bloc .logo svg path {
   fill: white;
-}
-.footer__bloc-links {
-  margin-left: 126px;
 }
 .footer__bloc-link {
   display: flex;
@@ -274,9 +267,8 @@ header {
 }
 
 /* MOBILE */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .header {
-    margin-left: 30px;
     margin-right: 0;
   }
 

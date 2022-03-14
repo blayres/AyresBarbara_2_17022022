@@ -4,6 +4,12 @@ body {
   padding: 0%;
 }
 
+.container {
+  max-width: 1440px;
+  padding: 0px 20px;
+  margin: auto;
+}
+
 .spinner {
   height: 100vh;
   position: fixed;
@@ -73,7 +79,7 @@ body {
   opacity: 1;
   background: linear-gradient(180deg, #FF79DA, #9356DC);
   color: white;
-  padding: 1px 20px;
+  padding: 15px 20px;
   margin: 35px;
   border-radius: 200px;
   border: none;
@@ -97,15 +103,13 @@ body {
 }
 .process__contain .process__steps {
   display: flex;
-  justify-content: space-evenly;
-}
-.process__contain .process__title {
-  margin-left: 122px;
+  justify-content: space-between;
 }
 .process__contain .process__step {
   display: flex;
   align-items: center;
   position: relative;
+  width: calc(25% - 20px);
   opacity: 1;
   background: #f6f6f6;
   padding: 9px 40px 7px 0px;
@@ -145,7 +149,6 @@ body {
   background: #f6f6f6;
 }
 .restaurants__title {
-  margin-left: 122px;
   margin-bottom: 50px;
 }
 
@@ -153,12 +156,12 @@ body {
   flex-wrap: wrap;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 .restaurant__card {
-  width: calc(41% - 14px);
-  margin-right: 18px;
-  margin-left: 18px;
+  width: calc(48% - 0px);
+  margin-right: 10px;
+  margin-left: 10px;
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0px 0px 6px 0px #0000002e;
@@ -219,13 +222,14 @@ body {
   position: absolute;
   opacity: 0;
   top: 1px;
+  margin-left: -22px;
   background: -webkit-linear-gradient(180deg, #FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transform: scale(0.1);
   transition: 0.4s all ease-out;
 }
-.restaurant__block-hearth .fas:hover {
+.restaurant__block-hearth .fas:hover, .restaurant__block-hearth .far:hover + .fas {
   opacity: 1;
   cursor: pointer;
   transform: scale(1.05);
@@ -243,14 +247,8 @@ body {
 .footer__bloc .logo {
   margin-bottom: 15px;
 }
-.footer__bloc .logo svg {
-  width: 32%;
-}
 .footer__bloc .logo svg path {
   fill: white;
-}
-.footer__bloc-links {
-  margin-left: 126px;
 }
 .footer__bloc-link {
   display: flex;
@@ -289,12 +287,15 @@ body {
 }
 
 /* MOBILE */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .process__contain .process__title {
     margin-left: auto;
   }
   .process__contain .process__steps {
     display: block;
+  }
+  .process__contain .process__step {
+    width: calc(100% - 52px);
   }
 
   .restaurants__title {
