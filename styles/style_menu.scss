@@ -40,7 +40,7 @@ body {
     max-width: 1440px;
     padding: 0px 20px;
     margin: 0;
-  }
+}
 
 
 // HEADER
@@ -53,7 +53,7 @@ header {
 
     &__icon {
         font-size: 25px;
-        margin-right: 18px;
+        margin-right: 30px;
         text-decoration: none;
         color: #000;
     }
@@ -108,7 +108,8 @@ header {
                 transition: 0.4s all ease-out;
             }
 
-            .fas:hover, .far:hover + .fas {
+            .fas:hover,
+            .far:hover+.fas {
                 opacity: 1;
                 cursor: pointer;
                 transform: scale(1.05);
@@ -121,7 +122,7 @@ header {
         display: flex;
         justify-content: space-between;
 
-        &__bloc{
+        &__bloc {
             width: calc(25% - 10px);
         }
 
@@ -171,7 +172,7 @@ header {
             }
 
             &:hover .menu__case__price {
-                padding-right: 10px;
+                padding-right: 70px;
                 transition: 0.8s ease;
 
             }
@@ -219,7 +220,6 @@ header {
     &__dish-and-price {
         display: flex;
         justify-content: space-between;
-        align-items: baseline;
         line-height: 0px;
     }
 
@@ -229,17 +229,27 @@ header {
         &__dish {
 
             &-title {
-
-                h4 {
-                    font-weight: 500;
-                    font-size: 19px;
-                }
+                font-weight: 500;
+                font-size: 19px;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
             }
 
             &-subtitle {
                 color: gray;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
             }
 
+        }
+
+        &__price {
+            display: flex;
+            margin-top: 50px;
+            margin-right: 10px;
+            margin-left: 10px;
         }
 
         &__right {
@@ -248,11 +258,6 @@ header {
 
         }
 
-        &__price {
-            display: flex;
-            margin-top: -25px;
-            margin-right: 10px;
-        }
     }
 
 
@@ -380,6 +385,10 @@ header {
 
     .header {
         margin-right: 0;
+
+        &__icon {
+            margin-right: 50px;
+        }
     }
 
     .menu {
@@ -391,7 +400,7 @@ header {
         &__grid {
             display: block;
 
-            &__bloc{
+            &__bloc {
                 width: 100%;
             }
         }
