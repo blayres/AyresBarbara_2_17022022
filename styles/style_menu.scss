@@ -99,7 +99,7 @@ header {
             .fas {
                 position: absolute;
                 opacity: 0;
-                top: 3px;
+                top: 4px;
                 margin-left: -22px;
                 background: -webkit-linear-gradient(180deg, #FF79DA, #9356DC);
                 -webkit-background-clip: text;
@@ -220,7 +220,6 @@ header {
     &__dish-and-price {
         display: flex;
         justify-content: space-between;
-        line-height: 0px;
     }
 
 
@@ -234,6 +233,9 @@ header {
                 display: -webkit-box;
                 -webkit-line-clamp: 1;
                 -webkit-box-orient: vertical;
+                overflow: hidden;
+                margin-bottom: 0;
+                margin-top: 10px;
             }
 
             &-subtitle {
@@ -241,13 +243,15 @@ header {
                 display: -webkit-box;
                 -webkit-line-clamp: 1;
                 -webkit-box-orient: vertical;
+                overflow: hidden;
+                margin-top: 8px;
             }
 
         }
 
         &__price {
             display: flex;
-            margin-top: 50px;
+            margin-top: 40px;
             margin-right: 10px;
             margin-left: 10px;
         }
@@ -287,7 +291,7 @@ header {
     background-color: $color__tertiaire;
     border-top-right-radius: 17px;
     border-bottom-right-radius: 17px;
-    margin-top: -67px;
+    margin-top: -76px;
 
     i {
         color: white;
